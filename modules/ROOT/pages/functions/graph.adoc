@@ -121,7 +121,7 @@ Properties for all graphs on the current composite database are returned.
 UNWIND graph.names() AS name
 WITH name, graph.propertiesByName(name) AS props
 WHERE "A" IN props.tags
-CALL {
+CALL () {
   USE graph.byName(name)
   MATCH (n)
   RETURN n
@@ -130,6 +130,11 @@ RETURN n
 ----
 
 Returns all nodes from a subset of graphs that have a `tags` property containing `"A"`.
+
+[NOTE]
+The above query uses an empty xref:subqueries/call-subquery.adoc#variable-scope-clause[variable scope clause]: `CALL () { ... }` (introduced in Neo4j 5.23).
+If you are using an older version of Neo4j, use `CALL { ... }` instead.
+For more information, see xref:subqueries/call-subquery.adoc#import-variables[CALL subqueries -> Importing variables].
 
 ======
 
@@ -153,7 +158,7 @@ Returns all nodes from a subset of graphs that have a `tags` property containing
 [source, cypher, role=noplay]
 ----
 UNWIND graph.names() AS graphName
-CALL {
+CALL () {
   USE graph.byName(graphName)
   MATCH (n)
   RETURN n
@@ -163,6 +168,11 @@ RETURN n
 // end::functions_graph_by_name[]
 
 Returns all nodes from all graphs on the current composite database.
+
+[NOTE]
+The above query uses an empty xref:subqueries/call-subquery.adoc#variable-scope-clause[variable scope clause]: `CALL () { ... }` (introduced in Neo4j 5.23).
+If you are using an older version of Neo4j, use `CALL { ... }` instead.
+For more information, see xref:subqueries/call-subquery.adoc#import-variables[CALL subqueries -> Importing variables].
 
 ======
 

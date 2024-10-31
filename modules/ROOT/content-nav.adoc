@@ -94,8 +94,8 @@
 ** xref:indexes/syntax.adoc[]
 
 * xref:constraints/index.adoc[]
+** xref:constraints/managing-constraints.adoc[]
 ** xref:constraints/syntax.adoc[]
-** xref:constraints/examples.adoc[]
 
 * xref:planning-and-tuning/index.adoc[]
 ** xref:planning-and-tuning/execution-plans.adoc[]
@@ -130,6 +130,7 @@
 *** xref:appendix/gql-conformance/unsupported-mandatory.adoc[]
 *** xref:appendix/gql-conformance/supported-optional.adoc[]
 *** xref:appendix/gql-conformance/analogous-cypher.adoc[]
+*** xref:appendix/gql-conformance/additional-cypher.adoc[]
 ** xref:appendix/tutorials/index.adoc[]
 *** xref:appendix/tutorials/basic-query-tuning.adoc[]
 *** xref:appendix/tutorials/advanced-query-tuning.adoc[]
