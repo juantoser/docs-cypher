@@ -221,9 +221,9 @@ Listing constraints requires the link:{neo4j-docs-base-uri}/operations-manual/{p
 ----
 SHOW [
       ALL
-     |NODE UNIQUE[NESS]
-     |REL[ATIONSHIP] UNIQUE[NESS]
-     |UNIQUE[NESS]
+     |NODE [PROPERTY] UNIQUE[NESS]
+     |REL[ATIONSHIP] [PROPERTY] UNIQUE[NESS]
+     |[PROPERTY] UNIQUE[NESS]
      |NODE [PROPERTY] EXIST[ENCE]
      |REL[ATIONSHIP] [PROPERTY] EXIST[ENCE]
      |[PROPERTY] EXIST[ENCE]
@@ -242,9 +242,9 @@ SHOW [
 ----
 SHOW [
       ALL
-     |NODE UNIQUE[NESS]
-     |REL[ATIONSHIP] UNIQUE[NESS]
-     |UNIQUE[NESS]
+     |NODE [PROPERTY] UNIQUE[NESS]
+     |REL[ATIONSHIP] [PROPERTY] UNIQUE[NESS]
+     |[PROPERTY] UNIQUE[NESS]
      |NODE [PROPERTY] EXIST[ENCE]
      |REL[ATIONSHIP] [PROPERTY] EXIST[ENCE]
      |[PROPERTY] EXIST[ENCE]
@@ -272,13 +272,13 @@ The type filtering keywords filters the returned constraints on constraint type:
 | Returns all constraints, no filtering on constraint type.
 This is the default if none is given.
 
-|NODE UNIQUE[NESS]
+|NODE [PROPERTY] UNIQUE[NESS]
 | Returns the node property uniqueness constraints.
 
-|REL[ATIONSHIP] UNIQUE[NESS]
+|REL[ATIONSHIP] [PROPERTY] UNIQUE[NESS]
 | Returns the relationship property uniqueness constraints.
 
-|UNIQUE[NESS]
+|[PROPERTY] UNIQUE[NESS]
 | Returns all property uniqueness constraints, for both nodes and relationships.
 
 |NODE [PROPERTY] EXIST[ENCE]
